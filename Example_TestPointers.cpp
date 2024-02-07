@@ -37,6 +37,15 @@ int main()
 		cout << array2[i] << endl;
 
 
+	// int* copy = array2;// shallow copy 
+
+	// Deep copy 
+	int* copy = new int[size2];
+	for (int i = 0; i < size2; i++)
+		copy[i] = array2[i];
+
+
+
 	delete[] array2;// deallocate old memory 
 
 	array2 = new int[size2*2];
